@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logocry.jpg" width="200" alt="Cry{mevpn} logo">
+  <img src="images/logocry.jpg" width="600" alt="Cry{mevpn} logo">
 </p>
 # Cry{mevpn}
 

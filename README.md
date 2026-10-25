@@ -1,4 +1,6 @@
-![Logo](images/logocry.jpg)
+<p align="center">
+  <img src="images/logocry.jpg" width="200" alt="Cry{mevpn} logo">
+</p>
 # Cry{mevpn}
 
 ![Release](https://img.shields.io/github/v/release/StarsMage/CryMeVPN)

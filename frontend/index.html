@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CryMeVpn</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+
+        <!-- SCREEN 1: Welcome -->
+        <div id="screen-welcome" class="screen active">
+            <div class="welcome-content">
+                <div class="logo-container">
+                    <img src="assets/logo.png" alt="CryMeVpn" class="app-logo-graphic">
+                </div>
+                <span class="mono-tag">XRAY PROTOCOL</span>
+                <h1>Secure Connection</h1>
+                <p>Deploy and manage your private network infrastructure.</p>
+            </div>
+            <button id="btn-get-started" class="btn-black">Get Started</button>
+        </div>
+
+        <!-- SCREEN 2: Server Setup -->
+        <div id="screen-setup" class="screen">
+            <div class="screen-header">
+                <h2>New Server</h2>
+                <p>Enter VPS access parameters</p>
+            </div>
+            <div class="form-stack">
+                <input type="text" id="input-ip" placeholder="IP Address">
+                <input type="text" id="input-ssh-port" placeholder="SSH Port (default 22)">
+                <input type="text" id="input-xray-port" placeholder="Xray Port (e.g. 443)">
+                <input type="text" id="input-user" placeholder="User (default root)">
+                <div class="password-wrapper">
+                    <input type="password" id="input-pass" placeholder="Password / SSH Key">
+                    <button type="button" id="btn-toggle-pass" class="btn-eye" title="Show/Hide">👁</button>
+                </div>
+            </div>
+
+            <button type="button" class="advanced-toggle" id="btn-advanced" aria-expanded="false">
+            <span>Advanced</span>
+            <span class="arrow">▲</span>
+            </button>
+
+            <div class="advanced-panel" id="advanced-panel">
+                <div class="advanced-inner">
+                    <label class="adv-card">
+                        <span class="adv-label">Camouflage domain</span>
+                        <input id="input-domain" type="text" placeholder="amazon.com" value="amazon.com" />
+                    </label>
+                    <label class="adv-card">
+                        <span class="adv-label">Camouflage port</span>
+                        <input id="input-dest-port" type="text" placeholder="443" value="443" />
+                    </label>
+                    <label class="adv-card">
+                        <span class="adv-label">Fingerprint</span>
+                        <select id="select-fingerprint"></select>
+                    </label>
+                    <label class="adv-card">
+                        <span class="adv-label">DNS (server side)</span>
+                        <select id="select-dns"></select>
+                    </label>
+                    <label class="adv-card">
+                        <span class="adv-label">Local HTTP port</span>
+                        <input id="input-http-port" type="text" placeholder="10809" value="10809" />
+                    </label>
+                    <label class="adv-card">
+                        <span class="adv-label">Local SOCKS port</span>
+                        <input id="input-socks-port" type="text" placeholder="10808" value="10808" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="action-stack">
+                <button id="btn-deploy" class="btn-black">Deploy Server</button>
+                <button id="btn-back-setup" class="btn-outline">Back</button>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: Loading / Deployment -->
+        <div id="screen-loading" class="screen">
+            <div class="loading-content">
+                <div class="minimal-spinner"></div>
+                <h2>Configuring...</h2>
+                <p id="loading-status">Setting up Docker & Xray container</p>
+            </div>
+            <button id="btn-cancel-deploy" class="btn-outline">Cancel</button>
+        </div>
+
+        <!-- SCREEN 4: Main Dashboard & Servers -->
+        <div id="screen-main" class="screen main-layout">
+            <div class="main-top">
+                <div class="status-indicator">
+                    <span id="status-dot" class="dot"></span>
+                    <span id="status-text">Disconnected</span>
+                </div>
+                <button id="btn-connect" class="btn-connect">CONNECT</button>
+            </div>
+
+            <div class="servers-panel">
+                <div class="panel-header">
+                    <span>Servers</span>
+                    <button id="btn-add-new" class="btn-text">+ Add</button>
+                </div>
+                <div id="servers-list" class="servers-list">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="custom-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3 id="modal-title">Error</h3>
+            <p id="modal-message">Text error</p>
+            <button id="modal-close" class="btn-black">OK</button>
+        </div>
+    </div>
+
+    <!-- Контекстное меню -->
+    <div id="context-menu" class="context-menu hidden">
+        <div class="menu-item" id="menu-edit">Edit</div>
+        <div class="menu-item" id="menu-delete">Delete</div>
+    </div>
+
+    <script src="src/app.js"></script>
+</body>
+</html>

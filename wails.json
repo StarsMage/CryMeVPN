@@ -1,0 +1,15 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "CryMeVPN",
+  "outputfilename": "Cry",
+  "frontend:dir": "frontend",
+  "author": {
+    "name": "StarsMage"
+  },
+  "info": {
+    "companyName": "StarsMageNoCompany",
+    "productName": "CryMeVPN",
+    "productVersion": "1.0.0",
+    "copyright": "Copyright © 2026 StarsMage"
+  }
+}

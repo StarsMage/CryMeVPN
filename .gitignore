@@ -1,0 +1,42 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Temporary and downloaded files
+*.zip
+*.tmp
+
+# Dependencies and tools
+vendor/
+
+# Build artifacts
+/build/bin/
+
+
+# Frontend dependencies
+/frontend/node_modules/
+/frontend/dist/
+/frontend/build/
+/frontend/wailsjs/
+
+# Logs
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+script.ps1

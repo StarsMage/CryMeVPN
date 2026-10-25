@@ -1,4 +1,4 @@
-[Logo](images/logocry.jpg)
+![Logo](images/logocry.jpg)
 # Cry{mevpn}
 
 ![Release](https://img.shields.io/github/v/release/StarsMage/CryMeVPN)
@@ -14,7 +14,7 @@
 
 **A desktop VPN client built on the Xray core. It deploys your own VPN server to your VPS in a few clicks.**
 
-[Main window](images/app.png)
+![Main window](images/app.png)
 
 ## Why Cry{mevpn}?
 

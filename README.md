@@ -1,7 +1,8 @@
+# Cry{mevpn}
 <p align="center">
   <img src="images/logocry.jpg" width="600" alt="Cry{mevpn} logo">
 </p>
-# Cry{mevpn}
+
 
 ![Release](https://img.shields.io/github/v/release/StarsMage/CryMeVPN)
 ![Downloads](https://img.shields.io/github/downloads/StarsMage/CryMeVPN/total)
